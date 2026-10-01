@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8f6b5a">
+  <meta name="description" content="Convite de casamento de Camila e Thiago — 18 de dezembro de 2026.">
+  <title>Camila & Thiago | Nosso Casamento</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #4d403a;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(255,255,255,.9), transparent 28%),
+        radial-gradient(circle at 90% 90%, rgba(255,255,255,.7), transparent 30%),
+        #efe6df;
+      display: flex;
+      justify-content: center;
+      padding: 22px 14px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 720px;
+      position: relative;
+      overflow: hidden;
+      background: rgba(255, 252, 249, .96);
+      border: 1px solid rgba(143,107,90,.25);
+      box-shadow: 0 18px 55px rgba(74,55,45,.16);
+      border-radius: 24px;
+    }
+
+    .page::before,
+    .page::after {
+      content: "✦";
+      position: absolute;
+      color: #b89682;
+      opacity: .35;
+      font-size: 70px;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .page::before {
+      top: 18px;
+      left: 18px;
+    }
+
+    .page::after {
+      right: 18px;
+      bottom: 18px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 55px 25px 34px;
+      background:
+        linear-gradient(rgba(255,252,249,.78), rgba(255,252,249,.94)),
+        radial-gradient(circle at center, #ead8ca, transparent 62%);
+    }
+
+    .small {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #947463;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(44px, 12vw, 76px);
+      font-weight: 400;
+      color: #76584a;
+      line-height: .95;
+      letter-spacing: -2px;
+    }
+
+    .amp {
+      display: block;
+      font-size: 30px;
+      color: #b28d78;
+      margin: 7px 0;
+      font-style: italic;
+    }
+
+    .date {
+      margin-top: 22px;
+      font-size: 15px;
+      letter-spacing: 3px;
+      color: #6f5a4e;
+      text-transform: uppercase;
+    }
+
+    .ornament {
+      width: 150px;
+      height: 1px;
+      margin: 25px auto 0;
+      background: linear-gradient(90deg, transparent, #b89682, transparent);
+      position: relative;
+    }
+
+    .ornament::after {
+      content: "♡";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -52%);
+      background: #fffaf7;
+      padding: 0 10px;
+      color: #a47b67;
+      font-size: 18px;
+    }
+
+    .content {
+      padding: 10px 28px 42px;
+      text-align: center;
+    }
+
+    .intro {
+      max-width: 560px;
+      margin: 0 auto 26px;
+      font-size: 17px;
+      line-height: 1.75;
+      color: #5c504a;
+    }
+
+    .notice {
+      max-width: 560px;
+      margin: 0 auto 28px;
+      padding: 20px 18px;
+      border-radius: 16px;
+      background: #f7efea;
+      border: 1px solid #eadbd1;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .notice strong {
+      color: #795b4c;
+    }
+
+    .button {
+      display: inline-block;
+      width: min(100%, 360px);
+      padding: 17px 24px;
+      border-radius: 999px;
+      background: #8f6b5a;
+      color: white;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      box-shadow: 0 10px 25px rgba(100,72,59,.20);
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: #795848;
+      box-shadow: 0 13px 30px rgba(100,72,59,.25);
+    }
+
+    .button:active {
+      transform: translateY(0);
+    }
+
+    .link-box {
+      margin: 18px auto 0;
+      max-width: 560px;
+      padding: 14px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #826f64;
+      overflow-wrap: anywhere;
+    }
+
+    .link-box a {
+      color: #82604f;
+    }
+
+    .closing {
+      margin-top: 27px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #65544b;
+      font-style: italic;
+    }
+
+    .signature {
+      margin-top: 10px;
+      font-size: 22px;
+      color: #805f4f;
+    }
+
+    footer {
+      border-top: 1px solid #eee1d9;
+      padding: 18px 20px 24px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      color: #a18d82;
+    }
+
+    @media (max-width: 430px) {
+      body {
+        padding: 0;
+      }
+
+      .page {
+        min-height: 100vh;
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .content {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <section class="hero">
+      <div class="small">Um momento para guardar para sempre</div>
+
+      <h1>
+        Camila
+        <span class="amp">&amp;</span>
+        Thiago
+      </h1>
+
+      <div class="date">18 de dezembro de 2026</div>
+      <div class="ornament"></div>
+    </section>
+
+    <section class="content">
+
+      <p class="intro">
+        Olá! Está chegando o momento mais esperado do ano:
+        <strong>o nosso casamento</strong> ❤️
+        Estamos muito felizes e contamos com a sua presença
+        no nosso grande dia!
+      </p>
+
+      <div class="notice">
+        Para facilitar a organização do nosso casamento,
+        criamos um site onde compartilhamos todos os detalhes
+        do nosso evento.
+        <br><br>
+        <strong>É muito importante que você confirme a sua presença.</strong>
+        Basta acessar o site e clicar no menu
+        <strong>“Confirme sua Presença”</strong>.
+      </div>
+
+      <a
+        class="button"
+        href="https://noivos.casar.com/camila-e-thiago-2026-12-18"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        💍 Acessar o site do casamento
+      </a>
+
+      <div class="link-box">
+        Se o botão não abrir, acesse diretamente:<br>
+        <a
+          href="https://noivos.casar.com/camila-e-thiago-2026-12-18"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://noivos.casar.com/camila-e-thiago-2026-12-18
+        </a>
+      </div>
+
+      <p class="closing">
+        Para nos presentear, você pode escolher qualquer item
+        da nossa Lista de Presentes 😊
+        <br><br>
+        Aguardamos você no nosso grande dia!
+      </p>
+
+      <div class="signature">
+        Com carinho,<br>
+        <strong>Camila &amp; Thiago</strong> ❤️
+      </div>
+
+    </section>
+
+    <footer>
+      Feito com carinho para celebrar um dia muito especial.
+    </footer>
+
+  </main>
+</body>
+</html>
